@@ -1,1 +1,1 @@
-# TK_Harjoitus_Flask_Postgre
+# TK_Harjoitus_Flask_PostgreSQL
