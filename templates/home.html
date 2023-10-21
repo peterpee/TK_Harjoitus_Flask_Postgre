@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock title %}
+{% block content %}
+{% if user.is_authenticated %}
+Hei {{ user.username }}! Olet {{ user.age }} vuotias.
+<br>
+<br>
+<a href="{% url 'recipe_list' %}">Reseptejä</a> 
+<br>
+<br>
+<a href="{% url 'create_recipe' %}">Lisää resepti</a>
+<br>
+<br>
+<a href="{% url 'logout' %}">
+   <button>Kirjaudu ulos</button></a>
+{% else %}
+<a href="{% url 'login' %}">Kirjaudu</a> |
+<a href="{% url 'signup' %}">Rekisteröidy</a>
+{% endif %}
+{% endblock content %}

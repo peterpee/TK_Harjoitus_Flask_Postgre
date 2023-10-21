@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>{{ recipe.title }}</h2>
+    <p><strong>Ainekset:</strong></p>
+    <p>{{ recipe.ingredients }}</p>
+    <p><strong>Ohjeet:</strong></p>
+    <p>{{ recipe.instructions }}</p>
+
+<a href="{% url 'delete' recipe.pk %}">
+   <button>Poista resepti</button></a>
+<br>
+<br>
+<a href="{% url 'recipe_list' %}">
+   <button>Takaisin</button></a>
+{% endblock %}

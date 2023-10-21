@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    Hei {{ user.username }}! Olet edelleen {{ user.age }} vuotias.
+    <p><a href="{% url 'logout' %}">Kirjaudu Ulos</a></p>
+    <h2>Reseptit</h2>
+    <ul>
+        {% for recipe in recipes %}
+            <li>
+                <a href="{% url 'view_recipe' recipe.id %}">{{ recipe.title }}</a>
+            </li>
+        {% empty %}
+            <li>Ei vielä reseptejä.</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'create_recipe' %}">Lisää resepti.</a>
+{% endblock %}

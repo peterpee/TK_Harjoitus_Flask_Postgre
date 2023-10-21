@@ -1,0 +1,23 @@
+<DOCCTYPE html>
+{% load static %}
+
+<html>
+<head>
+   <meta charset="utf-8">
+  <title>{% block title %}Reseptikirja{% endblock title %}</title>
+</head>
+
+<body>
+<main>
+
+  <img src="{% static 'images/pic01.jpg' %}" alt="FoodPic" width="400" height="100" >
+<br>  
+<font size="1">Photo by Peter Dawn on Unsplash</font>
+  <br>
+  <br>
+	{% block content %}
+	{% endblock content %}
+</main>
+</body>
+
+</html>
