@@ -1,1 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recipe Book</title>
+    <header>
+        <h2>Recipe Book</h2>
+    </header>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <img src="{{ url_for('static', filename='images/pic01.jpg') }}" width="300" height="50">
+    <br>
+    <font size="1">Photo by Peter Dawn on Unsplash</font>
+<hr>
+</head>
+<!---
+<body>
+    <div class="buttonpool">
+        {% if 'user_id' in session %}
+        <a href="{{ url_for('logout') }}" class="button">Logout</a><br>
+        <a href="{{ url_for('home') }}" class="button">Main</a><br>
+        { % else %}
+        <a href="{{ url_for('login') }}" class="button">Login</
+        <a href="{{ url_for('register') }}" class="button">Register</
+        {% endif %}
+    </div>
+--->
+    <main>
+       {% block content %}
 
+       <div class="buttonpool">
+           <a href="{{ url_for('home') }}" class="button">Login</a><br>
+           <a href="{{ url_for('home') }}" class="button">Register</a><br>
+
+       {% endblock content %}
+    </main>
+</body>
+</html>
