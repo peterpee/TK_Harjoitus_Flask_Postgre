@@ -1,6 +1,14 @@
 {% extends 'index.html' %}
+
 {% block content %}
-
-
-
+  <style>
+  p {
+    font-size: 20px;
+    }
+  </style>
+  <h3>{{ recipe.title }}</h3>
+  <br>
+  <p>{{ recipe.description }}</p5>
+  <p>{{ recipe.cooking_time }}</p>
+  <!----p>{{ recipe.time_used }}</p--->
 {% endblock %}
