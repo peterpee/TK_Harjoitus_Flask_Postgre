@@ -1,1 +1,31 @@
+{% extends 'index.html' %}
 
+{% block content %}
+  <h3>Add Recipe</h3>
+  <form method="POST">
+    <input type="hidden" name="csrf_token" value="{{ session.csrf_token }}">
+    <div>
+      <label for="title">Title</label>
+      <input type="text" name="title" required>
+    </div>
+    <br>    
+    <div>
+      <label for="description">Description</label>
+      <textarea name="description" required></textarea>
+    </div>
+    <br>
+    <div>
+      <label for="cooking_time">Cooking Time</label>
+      <input type="number" name="cooking_time" required></textarea>
+    </div>
+    <br>
+    <div>
+      <label for="give_rating">Rate Recipe</label>
+      <input type="number" name="give_rating" required>
+    </div>
+    <br>
+    <div class="button-container">
+      <button class="button" type="submit">Add Recipe</button>
+    </div>
+  </form>
+{% endblock content %}
