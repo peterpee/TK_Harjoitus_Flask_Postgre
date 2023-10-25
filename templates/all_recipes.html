@@ -1,4 +1,14 @@
 {% extends 'index.html' %}
 
-{% block content %}
-    
+{% block content %} 
+    <h3>All Recipes</h3>
+    <ul>
+        {% for recipe in recipes %}
+            <li>
+                <a href="{{ url_for('recipe', recipe_id=recipe.id) }}" class="recipe-link">
+                    {{ recipe.title }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}  
