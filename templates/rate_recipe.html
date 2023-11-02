@@ -1,0 +1,19 @@
+{% extends 'index.html' %}
+
+{% block content %}
+ 
+ <h3>Rate Recipe {{ recipe.title }}</h3>
+  <form method="POST">
+  <input type="hidden" name="csrf_token" value="{{ session.csrf_token }}">
+    <div>
+      <label for="give_rating">Rating</label>
+      <input type="number" name="give_rating" step="1" min="0" max="10" value="0">
+    </div>
+  <br>
+    <div>   
+      <button class="button" type="submit">Rate</button>
+      <a href="{{ url_for('recipe', recipe_id=recipe.id) }}" class="button">Recipe</a>
+    </div>
+  </form>
+
+{% endblock content %}
