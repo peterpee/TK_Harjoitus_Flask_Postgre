@@ -1,9 +1,9 @@
 {% extends 'index.html' %}
 
 {% block content %}
-  <h3>Add Recipe</h3>
+ 
+ <h3>Add Recipe</h3>
   <form method="POST">
-    <input type="hidden" name="csrf_token" value="{{ session.csrf_token }}">
     <div>
       <label for="title">Title</label>
       <input type="text" name="title" required>
@@ -16,16 +16,17 @@
     <br>
     <div>
       <label for="cooking_time">Cooking Time</label>
-      <input type="number" name="cooking_time" required></textarea>
+      <input type="number" name="cooking_time" step="1" min="0" max="300" value="0" required>
     </div>
     <br>
     <div>
       <label for="give_rating">Rate Recipe</label>
-      <input type="number" name="give_rating" required>
+      <input type="number" name="give_rating" step="1" min="0" max="10" value="0">
     </div>
     <br>
-    <div class="button-container">
+    <div>
       <button class="button" type="submit">Add Recipe</button>
     </div>
   </form>
-{% endblock content %}
+
+{% endblock content %}J
