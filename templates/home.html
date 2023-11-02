@@ -1,9 +1,11 @@
 {% extends 'index.html' %}
 
 {% block content %}
-    <h3>Main</h3>
-    <div class="button-container">
-        <a href="{{ url_for('add_recipe') }}" class="button">Add a new recipe</a>
-        <a href="{{ url_for('all_recipes') }}" class="button">View all recipes</a>
-     </div>
+
+  <h3>Main</h3>
+  <div>
+    <a href="{{ url_for('add_recipe') }}" class="button">Add a new recipe</a>
+    <a href="{{ url_for('all_recipes') }}" class="button">View all recipes</a>
+  </div>
+
 {% endblock content %}
