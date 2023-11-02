@@ -1,14 +1,19 @@
 {% extends 'index.html' %}
 
 {% block content %}
-  <style>
-  p {
-    font-size: 20px;
-    }
-  </style>
-  <h3>{{ recipe.title }}</h3>
-  <br>
-  <p>{{ recipe.description }}</p5>
-  <p>{{ recipe.cooking_time }}</p>
-  <!----p>{{ recipe.time_used }}</p--->
-{% endblock %}
+
+<h3>Description {{ recipe.title }}</h3>
+<p> {{ recipe.description }} </p>
+<p> Cooking time {{ recipe.cooking_time }} minutes </p>
+<p> Average rating {{ recipe.give_rating }} </p>
+
+<div>
+  <a href="{{ url_for('add_ingredient', recipe_id=recipe.id) }}" class="button">Ingredients</a>
+  <a href="{{ url_for('add_ingredient', recipe_id=recipe.id) }}" class="button">Instructions<a>  
+<br>
+<br>
+  <a href="{{ url_for('rate_recipe', recipe_id=recipe.id) }}" class="button">Rate Recipe</a>       
+  <a href="{{ url_for('all_recipes') }}" class="button">View all Recipes</a>     
+</div>
+
+{% endblock content %}
