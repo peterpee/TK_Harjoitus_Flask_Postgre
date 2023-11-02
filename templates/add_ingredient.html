@@ -1,0 +1,36 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<h3>Ingredients {{ recipe.title }}</h3>
+    <ul>
+      {% for ingredient in ingredients %}
+          <li>
+          {{ ingredient.ingredient }} {{ ingredient.amount }} {{ ingredient.unit }}
+          </li>
+      {% endfor %}
+   </ul>
+  <h3>Add Ingredients</h3>
+  <form method="POST" action="{{ url_for('add_ingredient', recipe_id=recipe_id) }}">
+    <div>
+      <label for="ingredient">Ingredient:</label>
+      <input type="text" name="ingredient" required>
+    </div>
+    <br>
+    <div>
+      <label for="unit">Unit:</label>
+      <input type="text" name="unit" required>
+    </div>
+    <br>
+    <div>
+      <label for="amount" >Amount:</label>
+      <input type="number" name="amount" step="0.5" min="0" max="1000" value="0" required>
+    </div>
+    <br>
+    <div>
+      <input type="submit" class="button" value="Add Ingredients">
+      <a href="{{ url_for('recipe', recipe_id=recipe.id) }}" class="button">Recipe</a>
+    </div>
+  </form>
+
+{% endblock content %}
