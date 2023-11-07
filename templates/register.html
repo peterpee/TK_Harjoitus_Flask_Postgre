@@ -1,0 +1,27 @@
+{% extends 'index.html' %}
+
+{% block content %}
+ 
+ <h3>Register</h3>
+  <form method="POST">
+    <div>
+      <label for="username">Username</label>
+      <input type="text" name="username" required>
+    </div>
+    <br>    
+    <div>
+      <label for="password">Password</label>
+      <input type="text" name="password" required>
+    </div>
+    <br>
+    <div>
+      <label for="password_agin">Password Again</label>
+      <input type="text" name="password_again" required>
+    </div>
+    <br>
+      <button class="button" type="submit">Register</button>
+      <a href="{{ url_for('index') }}" class="button">Back</a>
+    </div>
+  </form>
+
+{% endblock content %}J

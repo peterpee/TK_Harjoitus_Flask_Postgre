@@ -1,0 +1,27 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<h3>Instructions {{ recipe.title }}</h3>
+    <ul>
+      {% for instruction in instructions %}
+          <li>
+          {{ instruction.instruction }}
+          </li>
+      {% endfor %}
+   </ul>
+  <h3>Add Instructions</h3>
+  <form method="POST" action="{{ url_for('add_instruction', recipe_id=recipe_id) }}">
+    <div>
+      <label for="instruction">Instructions</label>
+      <textarea name="instruction" required></textarea>
+    </div>
+    <br>
+    <div>
+      <input type="submit" class="button" value="Add Instructions">
+      <a href="{{ url_for('recipe', recipe_id=recipe.id) }}" class="button">Recipe</a>
+    </div>
+ </form>
+
+{% endblock content %}
+
