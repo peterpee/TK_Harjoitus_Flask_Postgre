@@ -1,7 +1,7 @@
 # TK_Harjoitus_Flask_PostgreSQL
 
-> **Recipe App to create, view and delete recipes and rate them. Ingredients and instructions may be viewed and added.
-> Authentication to register as user with password, login and logout.**
+> **Recipe Book to create, view and delete recipes and rate them. Ingredients and instructions may be viewed and added.
+> Authentication to register as a user with password, login and logout.**
 
 
 **Table of contents:**
