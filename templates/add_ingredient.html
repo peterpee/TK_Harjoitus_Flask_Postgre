@@ -13,17 +13,17 @@
   <h3>Add Ingredients</h3>
   <form method="POST" action="{{ url_for('add_ingredient', recipe_id=recipe_id) }}">
     <div>
-      <label for="ingredient">Ingredient:</label>
+      <label for="ingredient">Ingredient</label>
       <input type="text" name="ingredient" required>
     </div>
     <br>
     <div>
-      <label for="unit">Unit:</label>
+      <label for="unit">Unit</label>
       <input type="text" name="unit" required>
     </div>
     <br>
     <div>
-      <label for="amount" >Amount:</label>
+      <label for="amount" >Amount</label>
       <input type="number" name="amount" step="0.5" min="0" max="1000" value="0" required>
     </div>
     <br>
@@ -34,3 +34,4 @@
   </form>
 
 {% endblock content %}
+

@@ -3,15 +3,14 @@
 {% block content %}
  
  <h3>Rate Recipe {{ recipe.title }}</h3>
-  <form method="POST">
-  <input type="hidden" name="csrf_token" value="{{ session.csrf_token }}">
+  <form method="POST" action="{{ url_for('rate_recipe', recipe_id=recipe_id) }}">
     <div>
       <label for="give_rating">Rating</label>
-      <input type="number" name="give_rating" step="1" min="0" max="10" value="0">
+      <input type="number" name="give_rating" step="1" min="0" max="10" value="0" required>
     </div>
   <br>
     <div>   
-      <button class="button" type="submit">Rate</button>
+      <input type="submit" class="button" value="Rate">
       <a href="{{ url_for('recipe', recipe_id=recipe.id) }}" class="button">Recipe</a>
     </div>
   </form>
