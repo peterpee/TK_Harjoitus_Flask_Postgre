@@ -15,27 +15,31 @@
 
 * Postgresql 12.16
 * Python virtual environment 
-* xx
-* xx
-* xx
+* Flask 3.0.0
+* Flask-Migrate 4.0.5
+* Flask-sqlalchemy 3.1.1
+* Python-dotenv 1.0.0
+* Werkzeug 3.0.0
 * psycopg2-binary 2.9.9
 
 ## Enhancement of Security
 
-* Authentication required to prevent access to URLs
+* Authentication required to Session Control
+* Use of .env
 
 ## Try it
 
-* Go through the prerequisites installations
+* Install PostgreSQL and configure DB
 * Activate virtual environment
+* Go through the rest of prerequisites installations
 * Git clone the repository
-* xx
-* xx
-* Access the site URL xx
+* Configure .env
+* Run pip freeze > requirements.txt
+* Access the site URL 127.0.0.1:5000
 
 ## ToDo
 
-* xx
-* xx
-* xx
-* xx
+* Session Control of URLs
+* Average rating not calculating the average
+* More functionality
+  
