@@ -41,5 +41,6 @@
 
 * Session Control of URLs
 * Average rating not calculating the average
+* Implementation of Flash messages
 * More functionality
   
