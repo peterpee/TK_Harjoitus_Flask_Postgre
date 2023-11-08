@@ -42,5 +42,6 @@
 * Session Control of URLs
 * Average rating not calculating the average
 * Implementation of Flash messages
+* Organizing large app.py file to smaller *.pys
 * More functionality
   
